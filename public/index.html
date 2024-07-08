@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -25,25 +25,6 @@
     <![endif]-->
     <div id="player" class="player container"></div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script>
-      import $, { when, ready, post } from 'jquery';
-
-      when(ready).then(() => {
-        const filmId = '16792940';
-        post(
-          '/ajax/player',
-          {
-            episode: 0,
-            filmId,
-          },
-          (response) => {
-            const item = JSON.parse(response);
-            $('#player').html(item.player);
-          }
-        );
-        console.log(filmId);
-      });
-    </script>
-    <!-- <script src="public/js/index.js"></script> -->
+    <script src="public/js/index.js"></script>
   </body>
 </html>

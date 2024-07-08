@@ -1,12 +1,8 @@
-import $, { when, ready, post } from 'jquery';
-
-when(ready).then(() => {
-  const filmId = '16792940';
-  post(
-    '/ajax/player',
-    {
+$.when($.ready).then(() => {
+  const filmId = 16792940;
+  $.post('/ajax/player', {
       episode: 0,
-      filmId, 
+      filmId,
     },
     (response) => {
       const item = JSON.parse(response);
