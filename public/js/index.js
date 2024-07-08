@@ -1,13 +1,22 @@
 $.when($.ready).then(() => {
-  const filmId = 16792940;
-  $.post('/ajax/player', {
-      episode: 0,
-      filmId,
+  // const filmId = parseInt('16792940');
+  // $.post('/ajax/player', {
+  //     episode: 0,
+  //     filmId,
+  //   },
+  //   (response) => {
+  //     const item = JSON.parse(response);
+  //     $('#player').html(item.player);
+  //   }
+  // );
+  $.ajax({
+    url: 'https://ver03.sptvp.com/watch?videoID=668b87084454f&userID=100471',
+    type: 'GET',
+    success(data) {
+      console.log(data);
     },
-    (response) => {
-      const item = JSON.parse(response);
-      $('#player').html(item.player);
-    }
-  );
-  console.log(filmId);
+    error(e) {
+      console.log('Error:', e);
+    },
+  });
 });
