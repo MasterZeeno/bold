@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#player {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border-radius: 10%;
+}
