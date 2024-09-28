@@ -1,22 +1,36 @@
-$.when($.ready).then(() => {
-  // const filmId = parseInt('16792940');
-  // $.post('/ajax/player', {
-  //     episode: 0,
-  //     filmId,
-  //   },
-  //   (response) => {
-  //     const item = JSON.parse(response);
-  //     $('#player').html(item.player);
-  //   }
-  // );
-  $.ajax({
-    url: 'https://ver03.sptvp.com/watch?videoID=668b87084454f&userID=100471',
-    type: 'GET',
-    success(data) {
-      console.log(data);
-    },
-    error(e) {
-      console.log('Error:', e);
-    },
+window.addEventListener('load', () => {
+  // Generate a random CSRF token
+  function generateToken() {
+    const randomBytes = crypto.getRandomValues(new Uint8Array(32));
+    return Array.from(randomBytes).map((byte) => byte.toString(16).padStart(2, '0')).join('');
+  }
+  
+  // Get the CSRF token input element
+  const csrfTokenInput = document.getElementsByName("csrf_tams_token")[0];
+  
+  // Generate and set the CSRF token
+  const csrfToken = generateToken();
+  csrfTokenInput.value = csrfToken;
+  
+  // Store the token in local storage
+  localStorage.setItem('csrfToken', csrfToken);
+  
+  // Handle form submission
+  const loginForm = document.getElementById('login-form');
+  const successMessage = document.getElementById('successMessage');
+  
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    // Replace with your actual login logic
+    const username = document.querySelector('input[name="username"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+  
+    // Example: Simulate successful login
+    if (username === 'admin' && password === 'password') {
+      successMessage.textContent = 'Login Successful!';
+    } else {
+      successMessage.textContent = 'Invalid username or password.';
+    }
   });
 });
