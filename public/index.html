@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" data-zee-result="none">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="css/style.css">
-  <title>Sample Login</title>
+  <title>TamsV3</title>
 </head>
+
 <body>
   <div class="container">
+    <div class="logo-container">
+      <svg xmlns="http://www.w3.org/2000/svg" id="logo" aria-hidden="true" role="img" color-rendering="optimizeQuality" shape-rendering="geometricPrecision" viewBox="0 0 16 16">
+        <defs>
+          <radialGradient id="a" cx="2.3%" cy="2.3%" r="69%" fx="9.6%" fy="9.6%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="var(--zee-primary-variant)" />
+            <stop offset="100%" stop-color="var(--zee-primary)" />
+          </radialGradient>
+          <radialGradient id="b" href="#a">
+            <stop offset="0%" stop-color="var(--zee-alternate-variant)" />
+            <stop offset="100%" stop-color="var(--zee-alternate)" />
+          </radialGradient>
+        </defs>
+        <path fill="url(#a)" d="M7.44 9.54H6.1c-1.01.05-1.6.22-1.67 1.96v4.44c-4.38 0-4.38 0-4.38-1.98V2.06C.05.08.05.08 4.43.08v4.43c0 1.63.66 1.91 1.67 1.97h3.8c1.02-.07 1.67-.34 1.67-1.96V.08c4.4 0 4.38 0 4.38 1.98v11.9c0 1.98.02 1.98-4.38 1.98V11.5c.01-1.74-.65-1.9-1.67-1.96Z" />
+        <path fill="url(#b)" d="M8 3.31c-.56 0-.56-.85.02-.85h2.76V1.31c0-.4 0-1.26-.8-1.26L6.22.08c-1 0-1 .79-1 1.19v3.17c0 .4 0 1.26 1 1.26l3.76.01c.8.01.8-.86.8-1.25V3.31Zm.01 10.23c-.56 0-.56-.85.02-.85h2.76v-1.15c0-.39 0-1.26-.8-1.26l-3.76.03c-1 0-1 .8-1 1.19v3.18c0 .39 0 1.26 1 1.26l3.76.01c.8 0 .8-.86.8-1.26v-1.15Z" />
+      </svg>
+    </div>
     <h1>Login</h1>
     <form action="https://masterzeeno.github.io/bold/checkLogin" id="login-form" method="post" accept-charset="utf-8">
       <input type="hidden" name="csrf_tams_token" value="" />
@@ -16,7 +34,32 @@
       <button type="submit">Sign In</button>
     </form>
     <div id="successMessage"></div>
+    <div id="waves">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 1300 550" style="enable-background:new 0 0 1300 550;" xml:space="preserve">
+        <path class="st1" d="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250">
+          <animate attributeName="d" dur="9s" begin="1s" values="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250;
+                M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250;
+				M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
+        </path>
+        <path class="st1" d="M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250">
+          <animate attributeName="d" dur="9s" values="M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250;
+                M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250;
+				M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
+        </path>
+        <path class="st1" d="M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250">
+          <animate attributeName="d" dur="9s" begin="2s" values="M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250;
+                M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250;
+				M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
+        </path>
+        <path class="st1" d="M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250">
+          <animate attributeName="d" dur="9s" values="M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250;
+                M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250;
+				M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
   </div>
   <script type="module" src="js/index.js"></script>
 </body>
+
 </html>

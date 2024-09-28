@@ -19,6 +19,11 @@
   --zee-result-color: rgb(var(--zee-base-color-rgb));
   --zee-darker-color: rgb(var(--zee-darker-color-rgb));
   --zee-result-bg-color: rgba(var(--zee-base-color-rgb), .03);
+
+  --zee-primary: rgb(0, 71, 171);
+  --zee-primary-variant: rgb(0, 150, 255);
+  --zee-alternate: rgb(139, 0, 0);
+  --zee-alternate-variant: rgb(220, 20, 60);
 }
 
 [data-zee-result=success] {
@@ -56,10 +61,10 @@ body {
 }
 
 .container {
+  position: relative;
   overflow: hidden;
   background-color: #fff;
   margin: 1.69rem;
-  /*margin-bottom: 9.6rem;*/
   padding: 1.69rem;
   border-radius: 1.69rem;
   box-shadow: .023rem .069rem .169rem rgba(var(--zee-base-color-rgb), .69);
@@ -135,4 +140,31 @@ button {
   color: var(--zee-result-color);
   margin-top: 1.69rem;
   font-weight: 400;
+}
+
+.logo-container {
+  width: 3.69rem;
+  height: auto;
+  margin: .96rem auto 0;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#waves {
+  position: absolute;
+  bottom: -.96rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#waves svg path {
+  opacity:  0.6;
+  fill: var(--zee-result-color);
+  enable-background:  new;
 }
