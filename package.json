@@ -4,7 +4,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "push": "git add public/* && git commit -m 'Update Site ✨' && git push"
   },
   "keywords": [],
   "author": "",
