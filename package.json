@@ -5,18 +5,14 @@
   "type": "module",
   "scripts": {
     "serve": "node server.js",
-    "push": "git add public/* && git commit -m 'Update Site ✨' && git push"
+    "push": "git add . && git commit -m 'Update Site ✨' && git push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "bootstrap": "^5.3.3",
-    "express": "^4.19.2",
-    "jquery": "^3.7.1"
-  },
   "devDependencies": {
-    "@types/jquery": "^3.5.30"
+    "express": "^4.19.2",
+    "open": "^10.1.0"
   }
 }

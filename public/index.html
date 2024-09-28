@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-zee-result="none">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,15 @@
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
+    <h1>Login</h1>
     <form action="https://masterzeeno.github.io/bold/checkLogin" id="login-form" method="post" accept-charset="utf-8">
       <input type="hidden" name="csrf_tams_token" value="" />
       <input name="username" type="text" placeholder="Username" required="required">
       <input name="password" type="password" placeholder="Password" required="required">
       <button type="submit">Sign In</button>
     </form>
-    <div id="successMessage" class="success"></div>
+    <div id="successMessage"></div>
   </div>
-  <script src="js/index.js"></script>
+  <script type="module" src="js/index.js"></script>
 </body>
 </html>
