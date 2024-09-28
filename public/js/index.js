@@ -30,8 +30,10 @@ window.addEventListener('load', () => {
     if (username === 'admin' && password === 'password') {
       successMessage.textContent = 'Login Successful!';
       successMessage.classList.add('success');
+      successMessage.classList.remove('error');
     } else {
       successMessage.textContent = 'Invalid username or password.';
+      successMessage.classList.add('error');
       successMessage.classList.remove('success');
     }
   });

@@ -38,11 +38,14 @@ button {
 }
 
 #successMessage {
-  color: red;
   margin-top: 20px;
   font-weight: 800;
 }
 
 .success {
-  color: green !important;
+  color: green;
+}
+
+.error {
+  color: red;
 }
