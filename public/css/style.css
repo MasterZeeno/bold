@@ -44,5 +44,5 @@ button {
 }
 
 .success {
-  color: green;
+  color: green !important;
 }
