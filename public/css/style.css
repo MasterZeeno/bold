@@ -7,7 +7,6 @@
 body {
   font-family: sans-serif;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -30,6 +29,7 @@ h2 {
 
 button,
 input {
+  display: block;
   border-radius: 1.96rem;
 }
 
