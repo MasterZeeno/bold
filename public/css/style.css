@@ -30,6 +30,7 @@ h2 {
 button,
 input {
   display: block;
+  border: .69px solid rgba(0, 0, 0, .69);
   border-radius: 1.96rem;
 }
 
