@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-size: 16px;
   background-color: #f0f0f0;
 }
 
@@ -26,21 +27,23 @@ h2 {
   margin-bottom: 20px;
 }
 
+button,
 input {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 1.96rem;
+}
+
+input {
+  margin: .32rem auto;
+  padding: .69rem 1.32rem;
+  width: 69%
 }
 
 button {
   background-color: green;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
   cursor: pointer;
+  margin: .96rem auto;
+  padding: .5rem 1.32rem;
 }
 
 #successMessage {
