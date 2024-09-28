@@ -9,7 +9,8 @@ body {
 
 .container {
   background-color: #fff;
-  padding: 60px;
+  margin: 20px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -28,7 +29,7 @@ input {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: green;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -36,7 +37,12 @@ button {
   cursor: pointer;
 }
 
+#successMessage {
+  color: red;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
 .success {
   color: green;
-  margin-top: 20px;
 }

@@ -29,8 +29,10 @@ window.addEventListener('load', () => {
     // Example: Simulate successful login
     if (username === 'admin' && password === 'password') {
       successMessage.textContent = 'Login Successful!';
+      successMessage.classList.toggle('success');
     } else {
       successMessage.textContent = 'Invalid username or password.';
+      successMessage.classList.toggle('success');
     }
   });
 });
