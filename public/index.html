@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-zee-result="none">
+<html lang="en" data-zee-colors="none">
 
 <head>
   <meta charset="UTF-8">
@@ -11,15 +11,15 @@
 <body>
   <div class="container">
     <div class="logo-container">
-      <svg xmlns="http://www.w3.org/2000/svg" id="logo" aria-hidden="true" role="img" color-rendering="optimizeQuality" shape-rendering="geometricPrecision" viewBox="0 0 16 16">
+      <svg viewBox="0 0 16 16">
         <defs>
           <radialGradient id="a" cx="2.3%" cy="2.3%" r="69%" fx="9.6%" fy="9.6%" gradientUnits="objectBoundingBox">
-            <stop offset="0%" stop-color="var(--zee-primary-variant)" />
-            <stop offset="100%" stop-color="var(--zee-primary)" />
+            <stop offset="0%" stop-color="rgb(var(--zee-dark-rgb))" />
+            <stop offset="100%" stop-color="rgb(var(--zee-base-rgb))" />
           </radialGradient>
           <radialGradient id="b" href="#a">
-            <stop offset="0%" stop-color="var(--zee-alternate-variant)" />
-            <stop offset="100%" stop-color="var(--zee-alternate)" />
+            <stop offset="0%" stop-color="rgb(var(--zee-alternate-variant-rgb))" />
+            <stop offset="100%" stop-color="rgb(var(--zee-alternate-rgb))" />
           </radialGradient>
         </defs>
         <path fill="url(#a)" d="M7.44 9.54H6.1c-1.01.05-1.6.22-1.67 1.96v4.44c-4.38 0-4.38 0-4.38-1.98V2.06C.05.08.05.08 4.43.08v4.43c0 1.63.66 1.91 1.67 1.97h3.8c1.02-.07 1.67-.34 1.67-1.96V.08c4.4 0 4.38 0 4.38 1.98v11.9c0 1.98.02 1.98-4.38 1.98V11.5c.01-1.74-.65-1.9-1.67-1.96Z" />
@@ -27,37 +27,38 @@
       </svg>
     </div>
     <h1>Login</h1>
+    <div class="waves">
+      <svg viewBox="0 0 10 10">
+        <defs>
+          <path id="wavepath" fill="currentColor" fill-opacity=".69" d="M 0 20 0 5 Q 1.5 4.25 3 5 t 3 0 3 0 3 0 3 0 3 0 v10 z" />
+          <path id="motionpath" d="M -6 0 0 0 0" />
+        </defs>
+        <g>
+          <use href="#wavepath" y="1.69">
+            <animateMotion dur="3s" repeatCount="indefinite">
+              <mpath href="#motionpath" />
+            </animateMotion>
+          </use>
+          <use href="#wavepath" y="1.96">
+            <animateMotion dur="6s" repeatCount="indefinite">
+              <mpath href="#motionpath" />
+            </animateMotion>
+          </use>
+          <use href="#wavepath" y="2">
+            <animateMotion dur="9s" repeatCount="indefinite">
+              <mpath href="#motionpath" />
+            </animateMotion>
+          </use>
+        </g>
+      </svg>
+    </div>
     <form action="https://masterzeeno.github.io/bold/checkLogin" id="login-form" method="post" accept-charset="utf-8">
       <input type="hidden" name="csrf_tams_token" value="" />
       <input name="username" type="text" placeholder="Username" required="required">
       <input name="password" type="password" placeholder="Password" required="required">
       <button type="submit">Sign In</button>
+      <div id="successMessage">&nbsp;</div>
     </form>
-    <div id="successMessage"></div>
-    <div id="waves">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 1300 550" style="enable-background:new 0 0 1300 550;" xml:space="preserve">
-        <path class="st1" d="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250">
-          <animate attributeName="d" dur="9s" begin="1s" values="M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250;
-                M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250;
-				M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
-        </path>
-        <path class="st1" d="M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250">
-          <animate attributeName="d" dur="9s" values="M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250;
-                M 0 250 C 600 450 650 100 1300 250 L 1300 550 L 0 550 L 0 250;
-				M 0 250 C 600 100 650 450 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
-        </path>
-        <path class="st1" d="M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250">
-          <animate attributeName="d" dur="9s" begin="2s" values="M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250;
-                M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250;
-				M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
-        </path>
-        <path class="st1" d="M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250">
-          <animate attributeName="d" dur="9s" values="M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250;
-                M 0 250 C 950 350 950 150 1300 250 L 1300 550 L 0 550 L 0 250;
-				M 0 250 C 350 150 350 350 1300 250 L 1300 550 L 0 550 L 0 250" repeatCount="indefinite" />
-        </path>
-      </svg>
-    </div>
   </div>
   <script type="module" src="js/index.js"></script>
 </body>

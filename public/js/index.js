@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.onload = (event) => {
   // Check if a CSRF token already exists in local storage
   let csrfToken = localStorage.getItem('csrfToken');
 
@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
   const loginForm = document.getElementById('login-form');
   const successMessage = document.getElementById('successMessage');
 
-  loginForm.addEventListener('submit', (event) => {
+  loginForm.onsubmit = (event) => {
     event.preventDefault();
 
     // Get input fields for username and password
@@ -30,31 +30,28 @@ window.addEventListener('load', () => {
     const password = loginForm.querySelector('input[name="password"]');
 
     // Simulate login process (Replace this with actual login logic)
-    if (username.value === 'admin' && password.value === 'password') {
-      successMessage.textContent = 'Login Successful!';
-      document.documentElement.setAttribute('data-zee-result', 'success');
+    if (username.value === '15913' && password.value === '546609529') {
+      successMessage.innerHTML = 'Login Successful!';
+      document.documentElement.setAttribute('data-zee-colors', 'success');
     } else {
-      successMessage.textContent = 'Invalid credentials.';
-      document.documentElement.setAttribute('data-zee-result', 'error');
+      successMessage.innerHTML = 'Invalid credentials.';
+      document.documentElement.setAttribute('data-zee-colors', 'error');
     }
-    
-    loginForm.disabled = true;
     
     // Reset form and UI after 3.692 seconds
     setTimeout(() => {
-      resetForm(username, password, successMessage, loginForm);
+      resetForm(username, password, successMessage);
     }, 3692);
-  });
+  };
 
   // Function to reset form inputs and messages
-  function resetForm(username, password, messageEl, loginForm) {
-    document.documentElement.setAttribute('data-zee-result', 'none');
+  function resetForm(username, password, messageEl) {
+    document.documentElement.setAttribute('data-zee-colors', 'none');
     username.value = '';
     password.value = '';
-    messageEl.textContent = '';
-    loginForm.disabled = false;
+    messageEl.innerHTML = '&nbsp;';
   }
-});
+};
 
 
 
